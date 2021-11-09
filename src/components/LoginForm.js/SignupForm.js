@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { signup, useAuth, logout, login  } from "../../firebase";
+import { signup, useAuth, logout, login } from "../../firebase";
 
 const SignupForm = () => {
   const [isloading, setIsLoading] = useState(false);
@@ -44,11 +44,17 @@ const SignupForm = () => {
         <input ref={emailRef} type="email" placeholder="email" />
         <input ref={passwordRef} type="password" placeholder="password" />
       </div>
-      <button disabled={isloading || currentUser} onClick={handleSignup}>Sign Up</button>
+      <button disabled={isloading || currentUser} onClick={handleSignup}>
+        Sign Up
+      </button>
 
-      <button disabled={isloading || currentUser} onClick={handleLogin}>Log In</button>
+      <button disabled={isloading || currentUser} onClick={handleLogin}>
+        Log In
+      </button>
 
-      <button diasble={isloading || !currentUser} onClick={handleLogout}>Log Out</button>
+      <button diasble={isloading || !currentUser} onClick={handleLogout}>
+        Log Out
+      </button>
     </div>
   );
 };
